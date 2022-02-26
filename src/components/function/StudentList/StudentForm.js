@@ -21,11 +21,16 @@ const StudentForm = ({ id }) => {
     const studentsState = useSelector(state => state.students);
 
     useEffect(() => {
-        studentsState.students?.forEach(stu => {
-            if (stu.no == id) {
-                setStudent(stu);
-            }
-        });
+        if (id) {
+            studentsState.students?.forEach(stu => {
+                if (stu.no == id) {
+                    setStudent(stu);
+                }
+            });
+        }
+        else {
+            setStudent(studentInitial);
+        }
     }, [id, studentsState]);
 
     const formSubmitHandler = (e) => {
