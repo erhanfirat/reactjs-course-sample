@@ -1,0 +1,10 @@
+.header {
+  background-color: #254180;
+  color: #ffffff;
+}
+
+.sidebar {
+  background-color: #4a7be7;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
